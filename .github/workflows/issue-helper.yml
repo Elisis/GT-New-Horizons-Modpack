@@ -22,7 +22,7 @@ jobs:
           issue_number: ${{ github.event_name == 'workflow_dispatch' && inputs.issue_number || github.event.issue.number }}
       - name: Annotate issue
         id: annotate
-        uses: GTNewHorizons/GTNHIssueHelper@angelica-crash-log
+        uses: GTNewHorizons/GTNHIssueHelper@fix/github-upload
         with:
           formdata: ${{ steps.parse.outputs.payload }}
       - name: Post comment
